@@ -40,7 +40,7 @@ Contact_Number VARCHAR(15) NOT NULL,
 );
 
 CREATE TABLE Reservation(
-ID INT NOT NULL AUTO_INCREMENT,
+ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 Restaurant_Name VARCHAR(50) NOT NULL,
 Restaurant_Email VARCHAR(50) NOT NULL,
 Customer_Email VARCHAR(50) NOT NULL,
@@ -48,7 +48,6 @@ Booked_Time TIME NOT NULL,
 Booked_Date DATE NOT NULL,
 No_Guests INT NOT NULL,
 Details VARCHAR(100) NULL,
-PRIMARY KEY(ID),
 CONSTRAINT FOREIGN KEY (Customer_Email) REFERENCES Customer(Cusomter_ Email)
 CONSTRAINT FOREIGN KEY (Restaurant_Email) REFERENCES Restaurant(Restaurant_Email)
 );
@@ -64,10 +63,10 @@ UPDATE Restaruant SET (?); Booked Seats
 UPDATE Restaruant SET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
 Contact_Number,Mon_OT,Mon_CT,Tues_OT,Tues_CT,Wed_OT,Wed_CT,Thur_OT,Thur_CT,Fri_OT,Fri_CT,Sat_OT,Sat_CT,Sun_OT,Sun_CT,Food_Type,Total_No_Seats
 
-SELECT * FROM Restaurant 
+SELECT Name,Contact_Number,Rating,Mon_OT,Mon_CT,Tues_OT,Tues_CT,Wed_OT,Wed_CT,Thur_OT,Thur_CT,Fri_OT,Fri_CT,Sat_OT,Sat_CT,Sun_OT,Sun_CT,Food_Type FROM Restaurant 
 WHERE Area=?;
 
-SELECT * FROM Restaurant 
+SELECT Name,Contact_Number,Rating,Mon_OT,Mon_CT,Tues_OT,Tues_CT,Wed_OT,Wed_CT,Thur_OT,Thur_CT,Fri_OT,Fri_CT,Sat_OT,Sat_CT,Sun_OT,Sun_CT FROM Restaurant 
 WHERE Food_Type=?;
 
 SELECT Restaurant_Name,Restaurant_Email,Customer_Email,Booked_Time,Booked_Date,No_Guests,Details FROM Reservation
