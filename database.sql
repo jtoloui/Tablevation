@@ -96,4 +96,8 @@ Customer Login-
 SELECT Customer_Email, Customer_Password FROM Customer
 WHERE Customer_Email=? AND Customer_Password=?;
 
+Rate Restaurant-
+
+
+
 */
