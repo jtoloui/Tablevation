@@ -36,7 +36,7 @@ Customer_Email VARCHAR(50) PRIMARY KEY,
 Customer_Password VARCHAR(50) NOT NULL,
 Forename VARCHAR(50) NOT NULL,
 Surname VARCHAR(50) NOT NULL,
-Contact_Number VARCHAR(15) NOT NULL,
+Contact_Number VARCHAR(15) NOT NULL
 );
 
 CREATE TABLE Reservation(
