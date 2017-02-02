@@ -48,7 +48,7 @@ Booked_Time TIME NOT NULL,
 Booked_Date DATE NOT NULL,
 No_Guests INT NOT NULL,
 Details VARCHAR(100) NULL,
-CONSTRAINT FOREIGN KEY (Customer_Email) REFERENCES Customer(Customter_Email),
+CONSTRAINT FOREIGN KEY (Customer_Email) REFERENCES Customer(Customer_Email),
 CONSTRAINT FOREIGN KEY (Restaurant_Email) REFERENCES Restaurant(Restaurant_Email)
 );
 
