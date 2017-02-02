@@ -54,24 +54,46 @@ CONSTRAINT FOREIGN KEY (Restaurant_Email) REFERENCES Restaurant(Restaurant_Email
 
 /*
 Queries:
+
+Creating Accounts- (Create User Account) (Create Restaurant Account)
 INSERT INTO Customer VALUES (?,?,?,?,?); ALL FIELDS
 INSERT INTO Restaurant VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); ALL EXCEPT BOOKED_SEATS
+
+Making a Reservation- (Book Table)
 INSERT INTO Reservation VALUES (?,?,?,?,?,?,?); ALL EXCEPT ID
+
+Edit Accounts/Update of the Reservations- (Edit Account) (Amend Booking) (Update Table Reservation)
 UPDATE Customer SET (?,?,?);   forename, surname and Number
 UPDATE Reservation SET (?,?,?,?); Time, Date, No of people, details
 UPDATE Restaruant SET (?); Booked Seats
-UPDATE Restaruant SET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
-Contact_Number,Mon_OT,Mon_CT,Tues_OT,Tues_CT,Wed_OT,Wed_CT,Thur_OT,Thur_CT,Fri_OT,Fri_CT,Sat_OT,Sat_CT,Sun_OT,Sun_CT,Food_Type,Total_No_Seats
+UPDATE Restaruant SET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); Contact_Number,Mon_OT,Mon_CT,Tues_OT,Tues_CT,Wed_OT,Wed_CT,Thur_OT,Thur_CT,Fri_OT,Fri_CT,Sat_OT,Sat_CT,Sun_OT,Sun_CT,Food_Type,Total_No_Seats
 
+Sort Restaurants by Area- (Select Area)
 SELECT Name,Contact_Number,Rating,Mon_OT,Mon_CT,Tues_OT,Tues_CT,Wed_OT,Wed_CT,Thur_OT,Thur_CT,Fri_OT,Fri_CT,Sat_OT,Sat_CT,Sun_OT,Sun_CT,Food_Type FROM Restaurant 
 WHERE Area=?;
 
+Sort Restaurants by Food Type- (Select Food Type)
 SELECT Name,Contact_Number,Rating,Mon_OT,Mon_CT,Tues_OT,Tues_CT,Wed_OT,Wed_CT,Thur_OT,Thur_CT,Fri_OT,Fri_CT,Sat_OT,Sat_CT,Sun_OT,Sun_CT FROM Restaurant 
 WHERE Food_Type=?;
 
+Sort Restaurants by Food Type and Area-
+SELECT Name,Contact_Number,Rating,Mon_OT,Mon_CT,Tues_OT,Tues_CT,Wed_OT,Wed_CT,Thur_OT,Thur_CT,Fri_OT,Fri_CT,Sat_OT,Sat_CT,Sun_OT,Sun_CT FROM Restaurant 
+WHERE Food_Type=? AND Area=?;
+
+Show all of the Reservations made by the Customer- (View Reservation)
 SELECT Restaurant_Name,Restaurant_Email,Customer_Email,Booked_Time,Booked_Date,No_Guests,Details FROM Reservation
 WHERE Customer_Email=?;
 
+Show all of the Reservations held by the Restuarant- (View Reservation)
 SELECT Restaurant_Name,Restaurant_Email,Customer_Email,Booked_Time,Booked_Date,No_Guests,Details FROM Reservation
 WHERE Restaurant_Email=?;
+
+Restuarant Login-
+SELECT Restaurant_Email, Restaurant_Password FROM Restaurant
+WHERE Restaurant_Email=? AND Restaurant_Password=?;
+
+Customer Login-
+SELECT Customer_Email, Customer_Password FROM Customer
+WHERE Customer_Email=? AND Customer_Password=?;
+
 */
