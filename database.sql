@@ -63,6 +63,7 @@ INSERT INTO Restaurant VALUES (`SpicyFlame.co.uk`,`SPF09pjL89054`,`SpicyFlame`,`
 
 Making a Reservation- (Book Table)
 INSERT INTO Reservation VALUES (?,?,?,?,?,?,?); ALL EXCEPT ID
+INSERT INTO Reservation VALUES(`SpicyFlame`, `SpicyFlame.co.uk`,`jeanaldread@gmail.com`,16:00,23-09-2017,20,`a birthday reservation for Jean Aldread on the 23rd of September and a maximum of 20 seats`)
 
 Edit Accounts/Update of the Reservations- (Edit Account) (Amend Booking) (Update Table Reservation)
 UPDATE Customer SET (?,?,?);   forename, surname and Number
