@@ -57,7 +57,9 @@ Queries:
 
 Creating Accounts- (Create User Account) (Create Restaurant Account)
 INSERT INTO Customer VALUES (?,?,?,?,?); ALL FIELDS
+INSERT INTO Customer VALUES (`jeanaldread@gmail.com`,`Aldread123`,`Jean`,`Aldread`,`07578260657`); 
 INSERT INTO Restaurant VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); ALL EXCEPT BOOKED_SEATS
+INSERT INTO Restaurant VALUES (`SpicyFlame.co.uk`,`SPF09pjL89054`,`SpicyFlame`,`56-60 High Street`,`Southsea`,`Portsmouth`,`Hampshire`,`PO4 7KL`,4,`0230567849`,09:00,23:00,09:00,23:00,09:00,23:00,09:00,23:00,09:00,23:00,09:00,23:00,10:00,22:00,10:00,22:00,`Mexican`,100);
 
 Making a Reservation- (Book Table)
 INSERT INTO Reservation VALUES (?,?,?,?,?,?,?); ALL EXCEPT ID
